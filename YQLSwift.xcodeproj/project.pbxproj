@@ -13,6 +13,7 @@
 		C5E0D82B1A74F0BB003E41AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5E0D82A1A74F0BB003E41AE /* Images.xcassets */; };
 		C5E0D82E1A74F0BB003E41AE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5E0D82C1A74F0BB003E41AE /* LaunchScreen.xib */; };
 		C5E0D83A1A74F0BB003E41AE /* YQLSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E0D8391A74F0BB003E41AE /* YQLSwiftTests.swift */; };
+		C5E0D8441A74F0C7003E41AE /* YQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E0D8431A74F0C7003E41AE /* YQL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		C5E0D8331A74F0BB003E41AE /* YQLSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQLSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E0D8381A74F0BB003E41AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E0D8391A74F0BB003E41AE /* YQLSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YQLSwiftTests.swift; sourceTree = "<group>"; };
+		C5E0D8431A74F0C7003E41AE /* YQL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YQL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		C5E0D8201A74F0BB003E41AE /* YQLSwift */ = {
 			isa = PBXGroup;
 			children = (
+				C5E0D8431A74F0C7003E41AE /* YQL.swift */,
 				C5E0D8231A74F0BB003E41AE /* AppDelegate.swift */,
 				C5E0D8251A74F0BB003E41AE /* ViewController.swift */,
 				C5E0D8271A74F0BB003E41AE /* Main.storyboard */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E0D8441A74F0C7003E41AE /* YQL.swift in Sources */,
 				C5E0D8261A74F0BB003E41AE /* ViewController.swift in Sources */,
 				C5E0D8241A74F0BB003E41AE /* AppDelegate.swift in Sources */,
 			);

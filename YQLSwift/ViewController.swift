@@ -10,16 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var queryTextView: UITextView!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var resultsTextView: UITextView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func tapSend(sender: UIButton) {
+        let results = YQL.query(queryTextView.text)
+        let queryResults = results?.valueForKeyPath("query.results") as NSDictionary?
+        if queryResults != nil {
+            NSLog( "query.results: \(queryResults)" )
+            resultsTextView.text = queryResults!.description
+        }
     }
-
-
 }
 

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YQLSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="select * from yahoo.finance.quote where symbol in (&quot;YHOO&quot;,&quot;AAPL&quot;,&quot;GOOG&quot;,&quot;MSFT&quot;)" translatesAutoresizingMaskIntoConstraints="NO" id="eLH-4m-HUP">
+                                <rect key="frame" x="48" y="28" width="504" height="160"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="b6e-09-r9z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Results will appear here" translatesAutoresizingMaskIntoConstraints="NO" id="CXy-6R-kzL">
+                                <rect key="frame" x="48" y="252" width="504" height="316"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="udd-KR-Vsl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="udd-KR-Vsl"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZo-Tt-pRZ">
+                                <rect key="frame" x="268" y="205" width="64" height="30"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="slJ-s7-YxQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="SEND">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4b7-lC-7V8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CZo-Tt-pRZ" firstAttribute="top" secondItem="eLH-4m-HUP" secondAttribute="bottom" constant="17" id="3qf-Ap-S2E"/>
+                            <constraint firstItem="eLH-4m-HUP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8YY-4Q-ZVW"/>
+                            <constraint firstItem="CXy-6R-kzL" firstAttribute="top" secondItem="eLH-4m-HUP" secondAttribute="bottom" constant="16" id="BdY-c1-Qex"/>
+                            <constraint firstItem="CZo-Tt-pRZ" firstAttribute="centerX" secondItem="eLH-4m-HUP" secondAttribute="centerX" id="DPO-ZK-chi"/>
+                            <constraint firstItem="CXy-6R-kzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="Ll7-V5-P6t"/>
+                            <constraint firstItem="CXy-6R-kzL" firstAttribute="top" secondItem="CZo-Tt-pRZ" secondAttribute="bottom" constant="17" id="QHM-Pj-FAu"/>
+                            <constraint firstItem="CXy-6R-kzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="UQL-TN-Ovi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CXy-6R-kzL" secondAttribute="trailing" constant="445" id="XZE-dC-nr6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eLH-4m-HUP" secondAttribute="trailing" constant="32" id="ZLu-Io-MtN"/>
+                            <constraint firstItem="CXy-6R-kzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="dvz-6m-z6Y"/>
+                            <constraint firstItem="CXy-6R-kzL" firstAttribute="centerX" secondItem="eLH-4m-HUP" secondAttribute="centerX" id="gMr-Oq-zPw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CXy-6R-kzL" secondAttribute="trailing" constant="32" id="lP7-7d-cVr"/>
+                            <constraint firstItem="CXy-6R-kzL" firstAttribute="width" secondItem="eLH-4m-HUP" secondAttribute="width" id="lqE-QB-dVe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CXy-6R-kzL" secondAttribute="bottom" constant="32" id="v0V-MD-dv5"/>
+                            <constraint firstItem="CXy-6R-kzL" firstAttribute="top" secondItem="eLH-4m-HUP" secondAttribute="bottom" constant="64" id="vEQ-HN-eZF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CXy-6R-kzL" secondAttribute="trailing" constant="32" id="xvi-GH-hn1"/>
+                            <constraint firstItem="eLH-4m-HUP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="yPG-iP-aMt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BdY-c1-Qex"/>
+                                <exclude reference="Ll7-V5-P6t"/>
+                                <exclude reference="UQL-TN-Ovi"/>
+                                <exclude reference="XZE-dC-nr6"/>
+                                <exclude reference="gMr-Oq-zPw"/>
+                                <exclude reference="lP7-7d-cVr"/>
+                                <exclude reference="lqE-QB-dVe"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="queryTextView" destination="eLH-4m-HUP" id="Vov-fz-1Pw"/>
+                        <outlet property="resultsTextView" destination="CXy-6R-kzL" id="y28-dD-JxP"/>
+                        <outlet property="sendButton" destination="CZo-Tt-pRZ" id="Nof-V3-Gzv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
